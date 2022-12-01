@@ -1,9 +1,9 @@
-function subMit() {
-  var value = document.getElementById("grade").value;
+function submit() {
+  const gradeValue = document.getElementById("grade").value;
   let result = "";
   let color;
     
-    if (value < 60) {
+  if (value < 60) {
     result = "F";   color = 'red'
   } else if (value >= 60 && value <= 69) {
     result = "D";  color = 'red'
@@ -14,6 +14,7 @@ function subMit() {
   } else if (value >= 90) {
     result = "A";  color = 'green'
   }
-document.getElementById("result").textContent = "This is your grade:  " + result;
-document.getElementById('form').style.backgroundColor = color
+  
+  document.getElementById("result").textContent = "This is your grade:  " + result;
+  document.getElementById('form').style.backgroundColor = color
 }
